@@ -115,9 +115,9 @@ class ViewController: UIViewController {
             showAlertMessage(messageHeader: "Unknown Weight!",
                              messageBody: "Please select your weight by moving the slider knob to right or left!")
         }
+        // When the pounds is selected from the segmented control
         else if (weightSegmentedControl.selectedSegmentIndex == 0) {
             // Checks to see if the feet and inches text field inputs are floats which is used to validate inputs
-            
             let feetHeight : Float? = Float(feetTextField.text!)
             let inchesHeight : Float? = Float(inchesTextField.text!)
             if (feetTextField.text!.isEmpty || inchesTextField.text!.isEmpty) {
@@ -153,6 +153,7 @@ class ViewController: UIViewController {
                 changeStatus(bmi: bmi)
             }
         }
+        // When the kilograms is selected from the segmented control
         else if (weightSegmentedControl.selectedSegmentIndex == 1) {
             // Checks to see if the meter text field input is a float which is used to validate inputs
             let metersHeight : Float? = Float(metersTextField.text!)
